@@ -1,3 +1,7 @@
+from django.contrib.auth.forms import UserCreationForm
+from django.urls import reverse_lazy
+from django.views import generic
+
 from .models import *
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
@@ -13,20 +17,20 @@ def category_list(request):
     # you can do some filtering if you need
     # (e.g. excluding categories without posts in it)
     categories = PostCategory.objects.all()
-    # return render(request, "Contents/category_list.html", {"categories": categories})
-    return render(request, "index.html", {"categories": categories})
+    return render(request, "Contents/category_list.html", {"categories": categories})
+    # return render(request, "index.html", {"categories": categories})
 
 
 def category_detail(request, pk):
     category = get_object_or_404(PostCategory, pk=pk)
-    # return render(request, "Contents/category_detail.html", {"posts": category})
-    return render(request, "index.html", {"PostCategory": category})
+    return render(request, "Contents/category_detail.html", {"posts": category})
+    # return render(request, "index.html", {"PostCategory": category})
 
 
 def post_list(request):
     posts = Post.objects.filter(Published_at__lte=timezone.now()).order_by('published_at')
-    # return render(request, "Contents/post_list.html", {"posts": posts})
-    return render(request, "index.html", {"Posts": posts})
+    return render(request, "Contents/post_list.html", {"posts": posts})
+    # return render(request, "index.html", {"Posts": posts})
 
 
 def post_detail(request, pk):
@@ -34,3 +38,8 @@ def post_detail(request, pk):
     # return render(request, "Contents/post_detail.html", {"post": post})
     return render(request, "index.html", {"Post": post})
 
+
+class Signup(generic.CreateView):
+    User_Form_Class = UserCreationForm
+    URL_200 = reverse_lazy('sign')
+    template_name = 'signup/sign'
