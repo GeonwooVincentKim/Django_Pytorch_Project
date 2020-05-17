@@ -28,7 +28,7 @@ class Post(models.Model):
     Contents = models.TextField(max_length=1000)
     Created_at = models.DateTimeField(
         auto_now_add=True,
-        verbose_name="Created at")
+        verbose_name="Created_at")
     Published_at = models.DateTimeField(
         blank=True, null=True, editable=False, verbose_name="Published at")
     is_published = models.BooleanField(default=False, verbose_name="Is published?")

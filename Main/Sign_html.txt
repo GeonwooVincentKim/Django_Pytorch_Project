@@ -1,0 +1,6 @@
+{% block signup_content %}
+    <a href="{% url 'signup' %}" class="top-signup"></a>
+    {% endblock %}
+    {% block signin_content %}
+    <a href="{% url 'signin' %}" class="top-signin"></a>
+    {% endblock %}

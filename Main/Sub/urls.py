@@ -8,7 +8,7 @@ from django.views import *
 urlpatterns = [
     # path('', test),
     path('sign/', Signup.as_view(), name='sign'),
-    # path('categories/', category_list),
+    path('categories/', category_list, name='category_list'),
     # path('categories/<pk>', category_detail),
     path('', post_list),
     # path('post/<pk>', post_detail),
