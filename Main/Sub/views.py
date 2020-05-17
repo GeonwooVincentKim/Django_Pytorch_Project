@@ -28,8 +28,10 @@ def category_detail(request, pk):
 
 
 def post_list(request):
-    posts = Post.objects.filter(Published_at__lte=timezone.now()).order_by('published_at')
-    return render(request, "Contents/post_list.html", {"posts": posts})
+    qs = Post.objects.all()
+    posts = qs.filter(Published_at__lte=timezone.now()).order_by('published_at')
+    qs = posts.order_by('Published_at')
+    return render(request, "Contents/post_list.html", {"posts": qs})
     # return render(request, "index.html", {"Posts": posts})
 
 
@@ -40,6 +42,6 @@ def post_detail(request, pk):
 
 
 class Signup(generic.CreateView):
-    User_Form_Class = UserCreationForm
-    URL_200 = reverse_lazy('sign')
-    template_name = 'signup/sign'
+    form_class = UserCreationForm
+    success_url = reverse_lazy('sign')
+    template_name = 'signup/signup.html'
