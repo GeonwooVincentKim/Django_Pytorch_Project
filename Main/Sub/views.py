@@ -11,6 +11,10 @@ from django.shortcuts import render, get_object_or_404
 # def test(request):
 #     return HttpResponse("hello World")
 
+def sign(request):
+    sign = Post.objects.all()
+    return render(request, "signup/sign.html", {"sign": sign})
+
 
 def category_list(request):
     # This will get all categories,
@@ -37,11 +41,11 @@ def post_list(request):
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
-    # return render(request, "Contents/post_detail.html", {"post": post})
-    return render(request, "index.html", {"Post": post})
+    return render(request, "Contents/post_detail.html", {"post": post})
+    # return render(request, "index.html", {"Post": post})
 
 
 class Signup(generic.CreateView):
     form_class = UserCreationForm
-    success_url = reverse_lazy('sign')
+    success_url = reverse_lazy('signin')
     template_name = 'signup/signup.html'

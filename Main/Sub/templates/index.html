@@ -35,12 +35,14 @@
                 <h2>Please Login if you want to use this WebSites.</h2>
                 {% block sign_content %}
                 <a href="{% url 'sign' %}">
-                    <span>Testing..</span>
+                    <p>Go to Sign-in or Sign-up</p>
+                    <span class="glyphicon glyphicon-log-in"></span>
                 </a>
                 {% endblock %}
                 {% block category_list %}
                 <a href="{% url 'category_list' %}">
-                    <span>See More Category_List</span>
+                    <p>See more Category_List</p>
+                    <span class="glyphicon glyphicon-search"></span>
                 </a>
                 {% endblock %}
             </div>
