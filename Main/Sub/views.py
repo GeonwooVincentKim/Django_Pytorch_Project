@@ -16,6 +16,11 @@ def sign(request):
     return render(request, "signup/sign.html", {"sign": sign})
 
 
+def signin(request):
+    signin = Post.objects.all()
+    return render(request, "signup/signin.html", {"signin": signin})
+
+
 def category_list(request):
     # This will get all categories,
     # you can do some filtering if you need

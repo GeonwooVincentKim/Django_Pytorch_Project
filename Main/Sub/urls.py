@@ -12,6 +12,7 @@ urlpatterns = [
 
     path('post/sign/', sign, name='sign'),
     path('post/sign/signup', views.Signup.as_view(), name='signup'),
+    path('post/sign/signin', signin, name='signin'),
     path('categories/', category_list, name='category_list'),
     # path('categories/<pk>', category_detail),
     path('', post_list),

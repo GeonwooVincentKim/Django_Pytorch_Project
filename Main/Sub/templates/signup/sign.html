@@ -1,5 +1,15 @@
 {% extends "index.html" %}
 {% block title %} Sign {% endblock %}
 {% block sign_content %}
-    <h1>Memo</h1>
+    <h1>Sign..</h1>
+    {% block signup_content %}
+    <a href="{% url 'signup' %}" class="top-signup">
+        <span>For Signup</span>
+    </a>
+    {% endblock %}
+    {% block signin_content %}
+    <a href="{% url 'signin' %}" class="top-signin">
+        <span>For Signin</span>
+    </a>
+    {% endblock %}
 {% endblock %}
