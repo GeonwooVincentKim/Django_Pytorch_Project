@@ -1,12 +1,10 @@
-{% extends "index.html" %}
+{% extends "signup/sign.html" %}
 {% block title %} Sign Up {% endblock %}
 {% block signup_content %}
+    <h2>Sign-Up</h2>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="glyphicon glyphicon-log-in"></button>
+        <button type="submit">Save</button>
     </form>
-    <a href="{% url 'signin' %}" class="top-signin">
-        <span>For SignIn</span>
-    </a>
 {% endblock %}

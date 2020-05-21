@@ -19,6 +19,12 @@
                 <!-- See Category Detail  -->
                 <!-- See Post Detail -->
                 <h2>Testing..</h2>
+                {% block category_list %}
+                <a href="{% url 'category_list' %}">
+                    <p>See more Category_List</p>
+                    <span class="glyphicon glyphicon-search"></span>
+                </a>
+                {% endblock %}
             </div>
             <div class="page-body">
                 <div id="row">
@@ -34,15 +40,14 @@
                 <br>
                 <h2>Please Login if you want to use this WebSites.</h2>
                 {% block sign_content %}
-                <a href="{% url 'sign' %}">
-                    <p>Go to Sign-in or Sign-up</p>
+                <a href="{% url 'sign' %}" class="top-sign">
+                     <p>Go to Sign-in or Sign-up</p>
                     <span class="glyphicon glyphicon-log-in"></span>
                 </a>
                 {% endblock %}
-                {% block category_list %}
-                <a href="{% url 'category_list' %}">
-                    <p>See more Category_List</p>
-                    <span class="glyphicon glyphicon-search"></span>
+                {% block signin_content %}
+                <a href="{% url 'signin' %}" class="top-signin">
+                    <span class="glyphicon glyphicon-log-in">In</span>
                 </a>
                 {% endblock %}
             </div>
