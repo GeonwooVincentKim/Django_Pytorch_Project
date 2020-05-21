@@ -10,15 +10,13 @@ from django.shortcuts import render, get_object_or_404
 # Create your views here.
 # def test(request):
 #     return HttpResponse("hello World")
+def index(request):
+    return render(request, "index.html", {})
+
 
 def sign(request):
-    sign = Post.objects.all()
-    return render(request, "signup/sign.html", {"sign": sign})
-
-
-def signin(request):
-    signin = Post.objects.all()
-    return render(request, "signup/signin.html", {"signin": signin})
+    # sign = Post.objects.all()
+    return render(request, "signup/sign.html", {})
 
 
 def category_list(request):

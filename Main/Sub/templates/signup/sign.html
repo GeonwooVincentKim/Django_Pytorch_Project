@@ -6,9 +6,14 @@
         <span>For Signup</span>
     </a>
     {% endblock %}
-<!--    {% block signin_content %}-->
-<!--    <a href="{% url 'signin' %}" class="top-signin">-->
-<!--        <span>For Signin</span>-->
-<!--    </a>-->
-<!--    {% endblock %}-->
+    {% block signin_content %}
+    <a href="{% url 'signin' %}" class="top-signin">
+        <span>For Signin</span>
+    </a>
+    {% endblock %}
+    {% block signout_content %}
+    <a href="{% url 'signout' %}" class="top-signout">
+        <span>For Signout</span>
+    </a>
+    {% endblock %}
 {% endblock %}
