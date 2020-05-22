@@ -7,5 +7,12 @@
                 {{ post.Published_At }}
             </div>
         {% endif %}
+        {% if user.is_authenticated %}
+            <div class="Author_Name">
+                {{ post.Author_Name }}
+            </div>
+        {% endif %}
+        <h1>{{ post.Title }}</h1>
+        <p>{{ post.Contents|linebreaksbr }}</p>
     </div>
 {% endblock %}

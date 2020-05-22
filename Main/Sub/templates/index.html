@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
     <script src="{% static 'js/index.js' %}" type="text/javascript"></script>
     <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 </head>
 <body>
     <div id="test">
@@ -33,16 +35,16 @@
                 {% endblock %}
             </div>
             <div class="page-body">
-                <div id="row">
+                <div class="row">
                     <div class="col-md-8">
-                    {% block post_content %}
-                    {% endblock %}
-                    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-                    <script type="text/javascript">
-                        $(function(){
-                            $.get('',
-                        });
-                    </script>
+                        {% block post_content %}
+                        {% endblock %}
+                        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                        <script type="text/javascript">
+                            $(function(){
+                                $.get('',
+                            });
+                        </script>
                     </div>
                 </div>
             </div>
@@ -62,7 +64,11 @@
                 {% endblock %}
             </div>
             <div class="page-body">
+                <div class="row">
+                    <div class="col-md-8">
 
+                    </div>
+                </div>
             </div>
             <div class="page-footer">
 

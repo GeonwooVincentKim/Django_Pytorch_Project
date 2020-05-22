@@ -17,6 +17,7 @@ from django.contrib.auth.views import (
 
 # app_name = 'myapp'
 urlpatterns = [
+    url(r'^$', views.post_list, name='post_list'),
     # path('', test),
     # url(r'^post/', include('django.contrib.auth.urls')),
     path('post/', include('django.contrib.auth.urls')),
@@ -30,8 +31,6 @@ urlpatterns = [
     path('post/<pk>/', views.post_detail, name='post_detail'),
     path('categories/', category_list, name='category_list'),
     # path('categories/<pk>', category_detail),
-    # path('', views.index, name='index'),
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
-    path('', views.post_list, name='post_list'),
     # path('post/<pk>', post_detail),
 ]
