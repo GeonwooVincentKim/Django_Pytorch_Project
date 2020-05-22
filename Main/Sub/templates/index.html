@@ -25,10 +25,25 @@
                     <span class="glyphicon glyphicon-search"></span>
                 </a>
                 {% endblock %}
+                {% block signout_content %}
+                <a href="{% url 'signout' %}?next=/" class="top-signout">
+                    <p>Logout</p>
+                    <span class="glyphicon glyphicon-log-out"></span>
+                </a>
+                {% endblock %}
             </div>
             <div class="page-body">
                 <div id="row">
-
+                    <div class="col-md-8">
+                    {% block post_content %}
+                    {% endblock %}
+                    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                    <script type="text/javascript">
+                        $(function(){
+                            $.get('',
+                        });
+                    </script>
+                    </div>
                 </div>
             </div>
             <div class="page-footer">
