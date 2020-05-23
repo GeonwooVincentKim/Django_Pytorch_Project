@@ -2,3 +2,5 @@
 #page { height: 50px; }
 .page-header { height: 100px; padding: 10px; position: relative; background-color: #ff2222;}
 .page-header .welcome-sign { height: 50px; background-color: #ff0000; }
+.page-body { height : 200px; padding: 10px; position: relative; background-color: #fffff0; }
+.page-body .post-content { height: 30px; background-color: #fff000; }

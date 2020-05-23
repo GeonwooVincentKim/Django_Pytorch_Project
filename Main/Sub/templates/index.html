@@ -33,11 +33,16 @@
                     <span class="glyphicon glyphicon-log-out"></span>
                 </a>
                 {% endblock %}
+
             </div>
             <div class="page-body">
                 <div class="row">
                     <div class="col-md-8">
-                        {% block post_content %}
+                        {% block content %}
+                        <a href="{% url 'post_list' %}" class="post-content">
+                            <p>Post</p>
+                            <span class="glyphicon glyphicon-search"></span>
+                        </a>
                         {% endblock %}
                         <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
                         <script type="text/javascript">
