@@ -15,7 +15,7 @@
     </div>
     <div id="page">
         {% if user.is_authenticated %}
-            <div class="page-header">
+            <div class="page-header" id="login-page-header">
                 <h1>Welcome</h1>
                 <!-- Change Password  -->
                 <!-- See Category Detail  -->
@@ -35,7 +35,7 @@
                 {% endblock %}
 
             </div>
-            <div class="page-body">
+            <div class="page-body" id="login-page-body">
                 <div class="row">
                     <div class="col-md-8">
                         {% block content %}
@@ -53,11 +53,11 @@
                     </div>
                 </div>
             </div>
-            <div class="page-footer">
+            <div class="page-footer" id="login-page-footer">
 
             </div>
         {% else %}
-            <div class="page-header">
+            <div class="page-header" id="logout-page-header">
                 <h1 class="welcome-sign">Welcome to My PortFoilo Page</h1>
                 <br>
                 <h2>Please Login if you want to use this WebSites.</h2>
@@ -68,14 +68,15 @@
                 </a>
                 {% endblock %}
             </div>
-            <div class="page-body">
+
+            <div class="page-body" id="logout-page-body">
                 <div class="row">
                     <div class="col-md-8">
 
                     </div>
                 </div>
             </div>
-            <div class="page-footer">
+            <div class="page-footer" id="logout-page-footer">
 
             </div>
         {% endif %}
