@@ -10,9 +10,9 @@
     <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-    <div id="test">
+    <!--<div id="test">
         <h1>Test the Page</h1>
-    </div>
+    </div>-->
     <div id="page">
         {% if user.is_authenticated %}
             <div class="page-header" id="login-page-header">
@@ -20,7 +20,8 @@
                 <!-- Change Password  -->
                 <!-- See Category Detail  -->
                 <!-- See Post Detail -->
-                <h2>Testing..</h2>
+                <!-- So much <br> tags.. Let me study about CSS Property.. -->
+                <br>
                 {% block category_list %}
                 <a href="{% url 'category_list' %}">
                     <p>See more Category_List</p>
@@ -35,6 +36,7 @@
                 {% endblock %}
 
             </div>
+            <br><br><br><br><br>
             <div class="page-body" id="login-page-body">
                 <div class="row">
                     <div class="col-md-8">
@@ -59,7 +61,6 @@
         {% else %}
             <div class="page-header" id="logout-page-header">
                 <h1 class="welcome-sign">Welcome to My PortFoilo Page</h1>
-                <br>
                 <h2>Please Login if you want to use this WebSites.</h2>
                 {% block sign_content %}
                 <a href="{% url 'sign' %}" class="top-sign">
@@ -68,7 +69,7 @@
                 </a>
                 {% endblock %}
             </div>
-
+            <br><br><br><br><br>
             <div class="page-body" id="logout-page-body">
                 <div class="row">
                     <div class="col-md-8">
