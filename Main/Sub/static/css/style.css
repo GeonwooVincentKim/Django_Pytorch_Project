@@ -2,8 +2,9 @@
 #page { /*height: 50px;*/ }
 /*
     Move .page-header color which is red to lower position.
+    margin-bottom means make
 */
-.page-header { height: 80px; position: static; justify-content:space-between; background-color: #ff2222;}
+.page-header { height: 50px; margin-bottom: 120px; position: static; justify-content:space-between; padding-bottom: 20px; background-color: #ff2222;}
 /*
     .page-header .welcome-sign height makes
     'Welcome to My PorFolio Page' letter move to lower position.
@@ -22,11 +23,11 @@
     .page-header .welcome-sign --> Please Login if you want to use this Websites.
     .page-body --> Colors name ".page-body" which tag color is "fffff0".
 */
-.page-header .welcome-sign { height: 80px; background-color: #ff0000; }
+.page-header .welcome-sign { height: 50px; background-color: #ff0000; }
 /*#page login-page-header { height: 80px; }*/
-#page login-page-header { height: 150px; }
-#page logout-page-header { height: 150px; }
-.page-body { height: 50px; justify-content: space-between; padding: 10px; position: static; background-color: #fffff0; }
+#page login-page-header { height: 50px; }
+#page logout-page-header { height: 50px; }
+.page-body { margin-bottom: 80px; height: 100%; padding: 100px; justify-content: space-between; padding: 10px; position: static; background-color: #fffff0; }
 .page-body .post-content { height: 200px; background-color: #fff000; }
 /*#page login-page-body { height: 200px;}*/
 #page login-page-body { height: 150px;}
